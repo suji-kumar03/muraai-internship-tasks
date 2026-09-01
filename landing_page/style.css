@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.logo:hover {
+    color: #007bff;
+}
+
+
+.header ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.header ul li a:hover {
+    color: #007bff;
+}
+
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.hero-text {
+    max-width: 700px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color:red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 170px;
+}
+.btn2 {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 170px;
+}
+
+.btn:hover {
+    background-color:white;
+    color: red;
+    font-size: large;
+}
+.btn2:hover {
+    background-color:white;
+    color: green;
+    font-size: large;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 80px 7%;
+    background-color: #f5f5f5;
+}
+
+
+.box {
+    max-width: 350px;
+    padding: 35px 25px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.box:hover {
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.box h2:hover {
+    color: #007bff;
+}
+
+.box p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+
+@media (max-width: 900px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .section {
+        padding: 60px 5%;
+        gap: 20px;
+    }
+
+    .box {
+        max-width: 300px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .header ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header ul li a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 65vh;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    
+    .btn {
+        padding: 10px 20px;
+    }
+
+    
+    .section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 20px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 350px;
+        padding: 25px 20px;
+    }
+
+   
+    .footer {
+        font-size: 14px;
+    }
+}
