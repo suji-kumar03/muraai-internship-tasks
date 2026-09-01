@@ -89,6 +89,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    width: 170px;
 }
 .btn2 {
     display: inline-block;
@@ -97,6 +98,7 @@ body {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    width: 170px;
 }
 
 .btn:hover {
