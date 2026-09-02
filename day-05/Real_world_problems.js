@@ -52,3 +52,7 @@ const students = [
     { name: "Arun", mark: 38 },
     { name: "Meena", mark: 91 }
 ];
+const passedstudents=students.filter((student)=>{
+    return student.mark>50;
+});
+console.log(passedstudents);
