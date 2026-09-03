@@ -1,3 +1,5 @@
+//Objects, this, closures, scope
+//ES modules (import/export)
 //Object is a collection of properties(key(property),value)
 const obj = {
   property1: "value1", //variable,identifier
@@ -71,18 +73,142 @@ console.log(cart.total());//100000
 //Function context
 function getThis() {
   return this;//refer obj1
-}
-// console.log(getThis());
-
+}// console.log(getThis());
 const obj1 = { name: "obj1" };
 const obj2 = { name: "obj2" };
-
 obj1.getThis = getThis;//obj1={name:"obj1",getThis : function getThis() {return this;} }
 //obj1.getThis = getThis();-->execute 
 obj2.getThis = getThis;//obj1={name:"obj1",getThis : function getThis() {return this;} }
 console.log(obj1);//{ name: 'obj1', getThis: [Function: getThis] }
 console.log(obj1.getThis()); // { name: 'obj1', getThis: [Function: getThis] }
 console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
+//Scope->where the variable is accessible
+//Global Scope->variable can be accessed outside the fuction,block
+const price=12000;
+const greet=()=>{
+    console.log(price);//12000
+};
+greet();
+//Function Scope-var->Variable can be accessed inside the function.
+function calculatesalary(){
+    let salary=13000;
+    console.log(salary);//13000
+}
+calculatesalary();
+//console.log(salary);->Reference error
+//Block Scope-let,const->Variable can be accessed inside the block like if,for,while…
+if(true){
+    let salary=11000;
+    console.log(salary);//11000
+};
+//console.log(salary);->reference error
+//var inside block=>Function scoped
+const greeting=()=>{
+    var name="Priya";
+    if(true){
+        var name="Anu";
+        console.log(name);//Anu //replace in name variable
+    }
+    console.log(name);//Anu
+}
+greeting();
+//console.log(name);->reference error
+//Corrected
+const newgreeting=()=>{
+    var name="Priya";
+    if(true){
+        let name="Anu";
+        console.log(name);//Anu //replace in name variable
+    }
+    console.log(name);//Priya
+}
+newgreeting();
+//var with block
+var pi=3.14;
+{
+    var pi=3.141;
+    console.log(pi);//3.141
+}
+console.log(pi);//3.141
+//let and cost diff
+let pival=3.14;
+{
+    let pival=3.141;
+    console.log(pival);//3.141
+}
+console.log(pival);//3.14
+//let vs var Inside a Block
+const usingvar=()=>{
+    if(true){
+        var name="John";
+        console.log(name);//John(function scope)
+    }
+    console.log(name);//John(function scope)
+}
+usingvar();
+//console.log(name);->Reference Error
+const usinglet=()=>{
+    if(true){
+        let name="Priya";
+        console.log(name);//Priya
+    }
+    //console.log(name);->reference error
+}
+usinglet();
+//console.log(name);->reference error
+//closure-->outer function variable accessed inner function
+function outer(){
+    var name="Anu";
+    function inner(){
+        console.log("Hello "+name);//Hello Anu
+    }
+    return inner;//return inner function definition reference=>inner (val to outer)
+}
+const op=outer();//stores in op
+op();// function is stored
+//Example
+function main(){
+    let count=0;
+    function counting(){
+        count++;
+        console.log(count);
+    }
+    return counting;
+}
+const result=main();
+result();
+result();
+result();
+//another method
+// function main(){
+//     let count=0;
+//     return function(){
+//         count++;
+//         console.log(count);
+//     };
+// }
+// const res=main();
+// res();
+// res();
+//ES6 modules->import/export=>to get a function and variable from another file
+//export->another file can use this func
+function add(a, b) {
+    return a + b;
+}
+export { add };
+//import-> using another file fuction to currently using func
+// import { add } from "./.js";
+// console.log(add(10, 20));
+const employee = {
+    name: "Priya",
+    role: "Developer"
+};
+export { employee };//multiple func {add,subtract}
+// import {employee} from "./.js"
+// console.log(employee.name);
+// console.log(employee.role);
+
+
 
 
 

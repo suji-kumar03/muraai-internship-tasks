@@ -39,3 +39,12 @@ const account = {
 console.log(account.deposit(2000));
 console.log(account.withdrawn(3000));
 console.log(account.current_balance());
+
+
+function makeAdder(x){
+    return function(y){
+        return x+y;
+    };
+}
+const newop=makeAdder(2);
+console.log(newop(1));
