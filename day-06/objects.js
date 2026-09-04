@@ -16,8 +16,8 @@ const myHonda = {
   wheels: 4,
   engine: { cylinders: 4, size: 2.2 },
 };
-console.log(myHonda.engine.cylinders);
-console.log(myHonda.engine.size);
+console.log(myHonda.engine.cylinders);//4
+console.log(myHonda.engine.size);//2.2
 //add,replace property
 const employee = {
     name: "Priya",
@@ -25,11 +25,11 @@ const employee = {
     department: "IT",
     salary: 50000
 };
-console.log(employee);
+console.log(employee);//{ name: 'Priya', age: 22, department: 'IT', salary: 50000 }
 employee["city"]="Bangalore";//add property
 console.log(employee);
 employee["salary"]=55000;//replace property
-console.log(employee);
+console.log(employee);// Updated=>salary: 55000,
 //this->reference to the current object
 const new_employee = {
     name: "Priya",
@@ -192,18 +192,18 @@ result();
 // res();
 //ES6 modules->import/export=>to get a function and variable from another file
 //export->another file can use this func
-function add(a, b) {
+ export function add(a, b) {
     return a + b;
 }
-export { add };
+
 //import-> using another file fuction to currently using func
 // import { add } from "./.js";
 // console.log(add(10, 20));
-const employee = {
+const employees = {
     name: "Priya",
-    role: "Developer"
+    role: "Developer" 
 };
-export { employee };//multiple func {add,subtract}
+export { employees };//multiple func {add,subtract}
 // import {employee} from "./.js"
 // console.log(employee.name);
 // console.log(employee.role);
