@@ -19,6 +19,7 @@ console.log(x);
     console.log(z);
 }
 //Function hoisting:
+//function declaration->satisfies
 greet();//entire func hoist
 function greet() {
     console.log("Hello");
