@@ -30,6 +30,6 @@ console.log("end1");
 console.log("start2");
 setTimeout(() => {
     console.log("Macrotask");//start2,end2,Microtask,Macrotask
-})
+},0)
 Promise.resolve().then(() => { console.log("Microtask") })
 console.log("end2");

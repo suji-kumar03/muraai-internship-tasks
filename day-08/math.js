@@ -43,10 +43,10 @@ console.log(Math.pow(4, 0.5));// sqrt(4)
 console.log(Math.pow(7, -2));//1/49
 console.log(Math.pow(-7, 0.5));//Nan
 //Math.sqrt
-Math.sqrt(-1); // Nan
-Math.sqrt(-0); // -0
-Math.sqrt(0); // 0
-Math.sqrt(1); // 1
-Math.sqrt(2); // 1.414213562373095
-Math.sqrt(9); // 3
-Math.sqrt(Infinity); // Infinity
+console.log(Math.sqrt(-1)); // Nan
+console.log(Math.sqrt(-0)); // -0
+console.log(Math.sqrt(0)); // 0
+console.log(Math.sqrt(1)); // 1
+console.log(Math.sqrt(2)); // 1.414213562373095
+console.log(Math.sqrt(9)); // 3
+console.log(Math.sqrt(Infinity)); // Infinity
