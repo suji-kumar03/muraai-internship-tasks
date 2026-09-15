@@ -12,7 +12,7 @@
 // };
 // console.log(user);
 
-//1.Partial=>for optioanl(update)
+//1.Partial=>for optional(update)
 
 //update only one
 // let updateUser: Partial<User> = { //name and age are optional
