@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡FlashCart - Food & Grocery Delivery App</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="offer-banner">
+        <div class="offer-track">
+            <span>🎉 20% OFF EVERY SNACK BOX</span>
+            <span>⚡ FREE DELIVERY ABOVE ₹299</span>
+            <span>🔥 BUY 2 GET 1 FREE</span>
+
+            <span>🎉 20% OFF EVERY SNACK BOX</span>
+            <span>⚡ FREE DELIVERY ABOVE ₹299</span>
+            <span>🔥 BUY 2 GET 1 FREE</span>
+        </div>
+    </div>
+    <header>
+
+        <div class="logo">
+            ⚡FlashCart - Food & Grocery Delivery App
+        </div>
+
+        <nav>
+            <a href="#home" onclick="showCart()">Home</a>
+            <a href="#menu">Menu</a>
+            <a id="cart1" href="#cart">
+                Cart 🛒
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+
+    </header>
+
+
+
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Craving a burger or missing some milk? Flash it, don't wait.</h1>
+
+            <p>
+                Order your favourite Food and Grocery from our menu
+                and enjoy it at home.
+            </p>
+
+            <a href="#menu" class="hero-btn">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+
+
+    <section id="menu" class="menu-section">
+
+        <h2>Our Menu</h2>
+
+        <input type="text" id="search-input" placeholder="Search food and grocery...">
+
+        <div class="categories">
+            <button class="category" data-category="all">
+                All
+            </button>
+            <button class="category-btn1" data-category="grocery">
+                🛒 The Dark Store
+            </button>
+
+            <button class="category-btn2" data-category="food">
+                🍔 The Flash Kitchen
+            </button>
+
+        </div>
+
+        <div id="grocery-items" class="food-container"></div>
+
+        <br>
+        
+        <div id="food-items" class="food-container"></div>
+
+    </section>
+
+    <section id="cart" class="cart-section">
+
+        <h2>Your Cart 🛒</h2>
+
+        <div id="cart-container">
+
+            <p id="empty-cart">
+                Your cart is empty.
+            </p>
+
+        </div>
+
+
+        <div class="cart-summary">
+
+            <h3>
+                Total:
+                ₹<span id="cart-total">0</span>
+            </h3>
+
+            <button id="order-btn">
+                Place Order
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer>
+
+        <p>© 2026 Foodie. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <script src="script1.js"></script>
+
+</body>
+
+</html>
